@@ -1,0 +1,294 @@
+<html>
+    <head>
+        <title>index</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <h1>Runequest Glorantha</h1>
+            <h2>Sorcerer Spell Chance <b class="badge badge-info text-wrap">{{resultado}} %</b></h2>
+        </header>
+
+
+        <form action="/" method="post">
+            <div class="w-100">
+            <div class="d-flex flex-row flex-wrap">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Runas del Hechizo</h5>
+                    <p class="card-text">Primero seleccioná las Runas necesarias del Hechizo.</p>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="fire" id="fire" name="fire">
+                      <label class="form-check-label" for="fire">
+                        Fire/Sky
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="earth" id="earth" name="earth">
+                      <label class="form-check-label" for="earth">
+                        Earth
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="water" id="water" name="water">
+                      <label class="form-check-label" for="water">
+                        Water
+                      </label>
+                    </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="air" id="air" name="air">
+                      <label class="form-check-label" for="air">
+                        Air
+                      </label>
+                    </div>
+                        <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="moon" id="moon" name="moon">
+                      <label class="form-check-label" for="moon">
+                        Moon
+                      </label>
+                    </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="dark" id="dark" name="dark">
+                      <label class="form-check-label" for="dark">
+                        Darkness
+                      </label>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="harmony" id="harmony" name="harmony">
+                      <label class="form-check-label" for="harmony">
+                        Harmony
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="disorder" id="disorder" name="disorder">
+                      <label class="form-check-label" for="disorder">
+                        Disorder
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="stasis" id="stasis" name="stasis">
+                      <label class="form-check-label" for="stasis">
+                        Stasis
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="move" id="move" name="move">
+                      <label class="form-check-label" for="move">
+                        Movement
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="truth" id="truth" name="truth">
+                      <label class="form-check-label" for="truth">
+                        Truth
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="illusion" id="illusion" name="illusion">
+                      <label class="form-check-label" for="illusion">
+                        Illusion
+                      </label>
+                    </div>
+                      <br>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="fertility" id="fertility" name="fertility">
+                      <label class="form-check-label" for="fertility">
+                        Fertility
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="death" id="death" name="death">
+                      <label class="form-check-label" for="death">
+                        Death
+                      </label>
+                    </div>
+                      <br>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="man" id="man" name="man">
+                      <label class="form-check-label" for="man">
+                        Man
+                      </label>
+                    </div>
+
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="beast" id="beast" name="beast">
+                      <label class="form-check-label" for="beast">
+                        Beast
+                      </label>
+                    </div>
+
+                      <div class="dropdown-divider"></div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="otras" id="otras" name="otras">
+                      <label class="form-check-label" for="otras">
+                        Otras
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Skill Base Chance</h5>
+                    <p class="card-text">Ingresá la Skill del Hechizo aprendido.</p>
+                    <div class="form-group">
+                        <label for="skill">Base Skill %</label>
+                        <input type="number" value={{skill}} class="form-control" id="skill" name="skill" aria-describedby="skillHelp">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Meditate/Ritual Bonus</h5>
+                    <p class="card-text">Elegí el tiempo preparando el Hechizo.</p>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" name="meditate">
+                            <option selected value="0">None</option>
+                            <option value="1">1 round</option>
+                            <option value="2">2 rounds</option>
+                            <option value="3">5 rounds (1min)</option>
+                            <option value="4">25 rounds (5min)</option>
+                            <option value="5">50 rounds (10min)</option>
+                            <option value="6">30 min</option>
+                            <option value="7">1 hora</option>
+                            <option value="8">5 horas</option>
+                            <option value="9">10 horas</option>
+                            <option value="10">1 día</option>
+                            <option value="11">2 días</option>
+                            <option value="12">1 semana</option>
+                            <option value="13">2 semanas</option>
+                            <option value="14">4 semanas</option>
+                            <option value="15">1 season</option>
+                            <option value="16">1 año</option>
+                            <option value="17">2 años</option>
+                            <option value="18">5 años</option>
+                            <option value="19">10 años</option>
+                            <option value="20">20 años</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Fecha Actual</h5>
+                    <p class="card-text">Elegí el día de la semana, la semana y la season Actual.</p>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" name="day" id="day">
+                            <option selected>Godday</option>
+                            <option>Freezeday</option>
+                            <option>Waterday</option>
+                            <option>Clayday</option>
+                            <option>Windday</option>
+                            <option>Fireday</option>
+                            <option>Wildday</option>
+                        </select>
+                        <br>
+                        <select class="form-control form-control-sm" name="week" id="week">
+                            <option selected>Disorder</option>
+                            <option>Harmony</option>
+                            <option>Death</option>
+                            <option>Fertility</option>
+                            <option>Stasis</option>
+                            <option>Movement</option>
+                            <option>Illusion</option>
+                            <option>Truth</option>
+                        </select>
+                        <br>
+                        <select class="form-control form-control-sm" name="season" id="season">
+                            <option selected>Sea</option>
+                            <option>Fire</option>
+                            <option>Earth</option>
+                            <option>Darkness</option>
+                            <option>Storm</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Lugar Asociado</h5>
+                    <p class="card-text">
+                        Elegí la asociación que tienen las runas del Hechizo con el Lugar actual. <br>
+                        <small>
+                            <b>Minor:</b> cultivos (Earth), camino (Movement), cementerio (Death), santuario (any). <br>
+                            <b>Mayor:</b> campo de batalla (Death), harvest festival (Fetility), volcán (Fire), Templo (any). <br>
+                            <b>Great:</b> lugares mitologicos.
+                        </small>
+                    </p>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" name="place">
+                            <option selected>None</option>
+                            <option>Minor</option>
+                            <option>Mayor</option>
+                            <option>Great</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Items y Materiales</h5>
+                    <p class="card-text">
+                        Indicá si el item/material es común o mágico.
+                    </p>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" name="item">
+                            <option selected>None</option>
+                            <option>Comun</option>
+                            <option>Magic</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Rune Affinity / Passions Bonus</h5>
+                    <p class="card-text">Ingresá el bonus ganado por Runa/Passion.</p>
+                    <div class="form-group">
+                        <label for="passion">Bonus %</label>
+                        <input type="number" value={{passion}} class="form-control" id="passion" name="passion" aria-describedby="passionHelp">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">EXTRA Bonus</h5>
+                    <p class="card-text">Ingresá cualquier modificador extra.</p>
+                    <div class="form-group">
+                        <label for="bonus">Bonus %</label>
+                        <input type="number" value={{bonus}} class="form-control" id="bonus" name="bonus" aria-describedby="bonusHelp">
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+            </div>
+
+
+            <br>
+            <button type="submit" class="btn btn-info mb-2"><b>Calcular %</b></button>
+        </form>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>
